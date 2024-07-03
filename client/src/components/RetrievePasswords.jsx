@@ -1,12 +1,10 @@
 import { useState, useEffect } from "preact/hooks";
-import getActualTime from "../libs/getActualTime";
-import axios from "axios";
 function RetrievePasswords() {
   const [id, setID] = useState("");
   const [display, setDisplay] = useState("");
 
   useEffect(() => {
-    console.log(display);
+    console.log("Done");
   }, [display]);
 
   const now = new Date();

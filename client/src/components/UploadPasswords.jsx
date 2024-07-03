@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'preact/hooks'
+import { useState } from 'preact/hooks'
 import getTime from '../libs/getTime'
 import axios from 'axios'
 
