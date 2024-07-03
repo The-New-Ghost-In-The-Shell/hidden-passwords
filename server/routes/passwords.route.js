@@ -20,21 +20,7 @@ router.post("/create-password", async (req, res) => {
     })
     await newPassword.save();
     res.json(newPassword);
-})
-
-// Get all passwords
-
-router.get("/", async (req, res) => {
-    try {
-        const passwords = await passwordModel.find({});
-        // if(passwords.length === 0){
-        //     res.json({ message: "No passwords found" });
-        // }
-        res.json(passwords);
-    } catch (err) {
-        res.json({ message: err });
-    }
-})
+})c
 
 // Get a single password
 

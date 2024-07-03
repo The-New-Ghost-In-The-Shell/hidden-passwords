@@ -26,7 +26,7 @@ function RetrievePasswords() {
 
   const getPasswords = async (idFromUser) => {
     try {
-      const request = await fetch(`http://localhost:3000/passwords/${idFromUser}`,{
+      const request = await fetch(`https://hidden-passwords.onrender.com/passwords/${idFromUser}`,{
         method:"GET"
       })
       const response = await request.json()

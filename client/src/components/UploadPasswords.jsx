@@ -20,7 +20,7 @@ function UploadPasswords() {
 
         const parsedPasswords = passwords.split("\n").filter(password => password.trim() !== "")
 
-        axios.post(`http://localhost:3000/passwords/create-password`, {
+        axios.post(`https://hidden-passwords.onrender.com/passwords/create-password`, {
             passwords: parsedPasswords,
             year: yearFromUser,
             month: monthFromUser,
