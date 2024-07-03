@@ -20,7 +20,7 @@ router.post("/create-password", async (req, res) => {
     })
     await newPassword.save();
     res.json(newPassword);
-})c
+})
 
 // Get a single password
 
