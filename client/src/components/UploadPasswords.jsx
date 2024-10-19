@@ -1,6 +1,7 @@
 import { useState } from 'preact/hooks'
 import getTime from '../libs/getTime'
 import axios from 'axios'
+// import 'dotenv/config'
 
 
 
@@ -20,7 +21,7 @@ function UploadPasswords() {
 
         const parsedPasswords = passwords.split("\n").filter(password => password.trim() !== "")
 
-        axios.post(`https://hidden-passwords-b3rl.onrender.com/passwords/create-password`, {
+        axios.post(`${import.meta.env.VITE_DEV_HOST}/passwords/create-password`, {
             passwords: parsedPasswords,
             year: yearFromUser,
             month: monthFromUser,
@@ -42,7 +43,7 @@ function UploadPasswords() {
     return (
         <div className='w-screen h-screen flex justify-center items-center flex-col gap-y-4'>
             <form onSubmit={handleSubmit} className='flex flex-col justify-center items-center gap-y-4 w-full '>
-                <input type="datetime-local" onChange={e => setFecha(e.target.value)} required />
+                <input type="datetime-local" onChange={e => setFecha(e.target.value)} value={fecha} required />
                 <textarea className='w-[70%] border border-black' name="passwords" id="passwords" cols="30" rows="10" onChange={e => setPasswords(e.target.value)} required ></textarea>
                 <input type="submit" value="Upload" className='px-4 py-2 bg-green-500' />
             </form>

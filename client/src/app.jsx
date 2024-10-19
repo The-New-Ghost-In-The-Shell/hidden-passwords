@@ -2,8 +2,8 @@ import Router from 'preact-router'
 import RetrievePasswords from './components/RetrievePasswords'
 import UploadPasswords from './components/UploadPasswords'
 import Navbar from './components/Navbar'
-export function App() {
 
+export function App() {
   return (
     <div>
       <Navbar />

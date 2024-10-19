@@ -7,10 +7,12 @@ const getActualTime = () => {
     return {
         actualHours,
         actualMinutes,
-        actualMonth,
-        actualDay,
-        actualYear
+        actualMonth: parseInt(actualMonth),
+        actualDay: parseInt(actualDay),
+        actualYear: parseInt(actualYear)
     }
 }
+
+console.log(getActualTime())
 
 export default getActualTime

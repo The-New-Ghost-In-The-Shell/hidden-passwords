@@ -1,12 +1,7 @@
 import express from "express";
-import mongoose from "mongoose";
 import { passwordModel } from "../models/passwordModel.js";
 
 const router = express.Router();
-
-// Create password
-
-
 
 router.post("/create-password", async (req, res) => {
     const { passwords, year, month, day, hours, minutes } = req.body;
