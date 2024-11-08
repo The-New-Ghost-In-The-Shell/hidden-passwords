@@ -7,10 +7,6 @@ function RetrievePasswords() {
   const [display, setDisplay] = useState("");
   const [now, setNow] = useState(getActualTime());
 
-  useEffect(() => {
-    console.log("Done");
-  }, [display]);
-
   const handleSubmit = async (e) => {
     e.preventDefault();
 

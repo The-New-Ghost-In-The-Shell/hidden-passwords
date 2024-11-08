@@ -5,14 +5,13 @@ const getActualTime = () => {
         [actualYear,actualMonth,actualDay] = now.toISOString().split('T')[0].split('-')
 
     return {
-        actualHours,
-        actualMinutes,
-        actualMonth: parseInt(actualMonth),
-        actualDay: parseInt(actualDay),
-        actualYear: parseInt(actualYear)
+        hours: actualHours,
+        minutes: actualMinutes,
+        month: parseInt(actualMonth),
+        day: parseInt(actualDay),
+        year: parseInt(actualYear)
     }
 }
 
-console.log(getActualTime())
 
 export default getActualTime
